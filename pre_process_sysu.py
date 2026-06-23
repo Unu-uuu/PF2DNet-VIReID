@@ -5,7 +5,7 @@ import os
 
 
 # _your_dataset_path
-data_path = '/share/home/u2515283044/2025-ACMMM-IRL/Data/SYSU-MM01/'
+data_path = './Data/SYSU-MM01/'
 rgb_cameras = ['cam1','cam2','cam4','cam5']
 ir_cameras = ['cam3','cam6']
 
