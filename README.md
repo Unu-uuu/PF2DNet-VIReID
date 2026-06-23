@@ -87,11 +87,11 @@ python test.py --dataset 'llcm' --resume 'model_path'  --gpu 0
 
 We adopt **ResNet-50** as backbone with ImageNet pretrained weights.
 
-| Datasets | Backbone | Rank@1 | Rank@10 |  mAP   | 
-| :------: | :------: | :----: | :-----: | :-----: | 
-|  SYSU-MM01   |   ResNet-50    | 82.36% | 98.11%  | 77.07% | 
-|  RegDB   |   ResNet-50    | 95.24% | -  | 92.52% | 
-|  LLCM   |   ResNet-50    | 67.56% | -  | 68.93% |
+| Datasets | Backbone | Rank@1 |  mAP  | 
+| :------: | :------: | :----: | :-----: | 
+|  SYSU-MM01   |   ResNet-50    | 82.36% | 77.07% | 
+|  RegDB   |   ResNet-50    | 95.24% | 92.52% | 
+|  LLCM   |   ResNet-50    | 67.56% | 68.93% |
 
 **\*The results may exhibit fluctuations due to random splitting, and further improvement can be achieved by fine-tuning the hyperparameters.**
 
