@@ -12,7 +12,6 @@ def Norm(x):
 def Entropy(x):
     B, C, H, W = x.shape
     x_int = x.round().long().clamp(min=0, max=255)
-    # 用 one_hot 替代 256 次 for 循环，速度起飞
     histic = F.one_hot(x_int, num_classes=256).sum(dim=(2, 3)).float()
     p_ij = histic / (H * W)
     h_ij = -torch.sum(p_ij * torch.log(p_ij + 1e-8), dim=2)  
