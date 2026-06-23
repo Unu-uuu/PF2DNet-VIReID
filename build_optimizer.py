@@ -9,9 +9,10 @@ def build_optim(net, opt, lr):
     
     
     adaptive_keywords = [
-        'base_mix', 'adapt_scale', 'adapt_bias', 
-        'size_scale', 'fusion_weight', 'mix_ratio',  
-        'alpha',  
+        'base_mix', 'adapt_scale', 'adapt_bias',  
+        'size_scale', 'fusion_weight', 'mix_ratio', 
+        'alpha', 
+    
     ]
     
     shallow_optimizer = None  
@@ -28,13 +29,14 @@ def build_optim(net, opt, lr):
             if "bias" in key:
                 lr_temp = lr_temp * 2
                 weight_decay = 0.0
-            
+
             if "bottleneck" in key or "classifier" in key:
                 lr_temp = lr
             
+           
             if any(kw in key for kw in adaptive_keywords):
-                lr_temp = lr * 0.01  
-                weight_decay = 1e-5 
+                lr_temp = lr * 0.01 
+                weight_decay = 1e-5  
             params += [{"params": [value], "lr": lr_temp, "weight_decay": weight_decay}]
 
         optimizer = optim.Adam(
@@ -49,7 +51,6 @@ def build_optim(net, opt, lr):
         
         ignored_ids = list(map(id, bottleneck_params)) + list(map(id, classifier_params))
         
-
         adaptive_params = []
         base_params = []
         
@@ -57,24 +58,23 @@ def build_optim(net, opt, lr):
             if not param.requires_grad:
                 continue
             if id(param) in ignored_ids:
-                continue  # 
+                continue 
             
             if any(kw in name for kw in adaptive_keywords):
                 adaptive_params.append(param)
             else:
                 base_params.append(param)
         
-        
         param_groups = [
             {'params': base_params, 'lr': 0.1 * lr},
             {'params': bottleneck_params, 'lr': lr},
             {'params': classifier_params, 'lr': lr},
         ]
-        
+
         if len(adaptive_params) > 0:
             param_groups.append({
                 'params': adaptive_params, 
-                'lr': 0.01 * lr,  
+                'lr': 0.01 * lr,  #
                 'weight_decay': 1e-5
             })
         
