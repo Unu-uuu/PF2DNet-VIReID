@@ -102,16 +102,6 @@ This project is built upon the [IRL](https://github.com/Mapzzone/2025-ACMMM-IRL)
 
 Thanks a lot for the authors' contribution.
 
-**If you find this code useful for your research, please cite:**
-
-```
-@article{sf2dnet2025,
-  title={Spatial-rectification and Frequency-decoupling with Feature decorrelation Network for Visible-Infrared Person Re-Identification},
-  author={Your Name},
-  journal={Conference/Journal Name},
-  year={2025}
-}
-```
 
 ##  References
 
