@@ -1,6 +1,6 @@
-# SF2DNet: Spatial-rectification and Frequency-decoupling with Feature decorrelation Network
+# $\text{SF}^2$DNet: Spatial-rectification and Frequency-decoupling with Feature Decorrelation for Visible-Infrared Person Re-Identification
 
-Official PyTorch implementation of the paper **"SF2DNet: Spatial-rectification and Frequency-decoupling with Feature decorrelation Network"**.
+Official PyTorch implementation of the paper **"$\text{SF}^2$DNet: Spatial-rectification and Frequency-decoupling with Feature Decorrelation for Visible-Infrared Person Re-Identification"**.
 
 ![](VisualizeH/Mainframework.jpg)
 
