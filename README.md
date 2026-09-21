@@ -1,12 +1,12 @@
-# SF²DNet: Spatial-rectification and Frequency-decoupling with Feature Decorrelation for Visible-Infrared Person Re-Identification
+# PF²DNet: Phase-anchored and Frequency-guided with Feature-decorrelated Network for Visible-Infrared Person Re-identification
 
-Official PyTorch implementation of the paper **"SF²DNet: Spatial-rectification and Frequency-decoupling with Feature Decorrelation for Visible-Infrared Person Re-Identification"**.
+Official PyTorch implementation of the paper **"PF²DNet: Phase-anchored and Frequency-guided with Feature-decorrelated Network for Visible-Infrared Person Re-identification"**.
 
 ![](VisualizeH/Mainframework.jpg)
 
 ## Overview
 
-We propose **SF²DNet**, a novel framework for VI-ReID that bridges the cross-modality gap through synergistic spatial-frequency optimization. Our method comprises three core modules:
+We propose **PF²DNet**, a novel framework for VI-ReID that bridges the cross-modality gap through synergistic spatial-frequency optimization. Our method comprises three core modules:
 
 - **PAT (Phase-anchored Amplitude Translation):** Performs modality-agnostic style translation.
 - **EFD (Energy-guided Frequency Decoupling):** Dynamically filters modality-specific noise.
