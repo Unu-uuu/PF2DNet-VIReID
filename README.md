@@ -37,7 +37,7 @@ Our experiments are conducted under the following environments:
 
 ## 3. Training
 
-**Train SF²DNet by**
+**Train PF²DNet by**
 
 ```
 python train.py --dataset sysu --gpu 0
